@@ -8,7 +8,9 @@ s = m:section(TypedSection, "syncthing")
 
 s.anonymous = true
 
-s:option(Flag, "enabled", translate("Enable"))
+o = s:option(Flag, "enabled", translate("Enable"))
+o.default = 0
+o.rmempty = false
 
 gui_address = s:option(Value, "gui_address", translate("GUI access address"))
 gui_address.description = translate("Use 0.0.0.0 to monitor all access.")
@@ -42,6 +44,5 @@ nice.placeholder = "19"
 nice.datatype="range(0,19)"
 nice.rmempty = false
 
-s.rmempty = false
 
 return m
