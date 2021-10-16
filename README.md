@@ -19,6 +19,14 @@
   https://github.com/openwrt/packages/blob/master/utils/syncthing/Makefile#L9
 
   将其修改为 `PKG_HASH:=skip`
+  
+ -第三处：第5行
+  https://github.com/openwrt/packages/blob/master/utils/syncthing/files/etc/config/syncthing#L5
+  将http:127.0.0.1:8384改为：0.0.0.0:8384
+  
+ -第四处：第28行
+  https://github.com/openwrt/packages/blob/master/utils/syncthing/files/etc/init.d/syncthing#L28
+  将http:127.0.0.1:8384改为：0.0.0.0:8384
 
 此外，为防止升级后数据库破损，建议升级时不保留数据库，具体如下：
 
