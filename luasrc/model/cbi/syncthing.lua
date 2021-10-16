@@ -8,7 +8,7 @@ s = m:section(TypedSection, "syncthing")
 
 s.anonymous = true
 
-o = s:option(Flag, "enabled", translate("Enable"))
+o = s:option(Flag, "enabled", translate("Enabled"))
 o.default = 0
 o.rmempty = false
 
